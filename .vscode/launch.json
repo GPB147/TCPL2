@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "e:/0 Plans/1 Job(Money)/7 Gain professional experience/0 Git, GitHub/1 Repos/The-C-Programming-Language-Second-Edition/src",
+      "program": "e:/0 Plans/1 Job(Money)/7 Gain professional experience/0 Git, GitHub/1 Repos/The-C-Programming-Language-Second-Edition/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
