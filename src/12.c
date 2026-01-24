@@ -7,5 +7,8 @@ int main()
 
     c = getchar();
 
-    printf("%d\n", c);
+    while (c >= 3) 
+    {
+        
+    }
 }

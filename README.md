@@ -1,81 +1,132 @@
-```c
-"C Programming(Scientific Language)": "Page 18"
+```python
+"C": "Page 21"
 
-	"0 Hacker" = ["Seeing", "Imagine", "Doing"]
-
-	"1 Priority of writing" = "Everything give meaning" 
-
-	"2 doing something with python(Long)" = {
+	"0 C(Short)" = {
 
 	}
-
-	"3 C sees(reads)":
 		
-	"4 keys":
+	"1 keys":
 
 		"""0 Numbers = [..., 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...]
 		
-		1 Operarion = \ () {} ' , <> # ; \\ /**/ = >= <= * + - / \" += -= *=''' """
+		1 Symboles = \ () {} ' , <> # ; \\ /**/ = != >= <= * + - / \" += -= *=''' ++ -- """
 
-		"2 Words" =  
+		"""2 Words =  
+	
+			0 Core:
 
-			"0 Standard Libraries of C"
-		
-				"0 Core":
+			1 Operators:
 
-				"1 Build in Functions":
+				0 What:
 
-					"""1 \n     new line
+					0\n = [new line]
 
-					2 \t     tab
+					1 \t = [tab]
 
-					3 \b     backspace
+					2 \b = [backspace=back writing]
 
-					4 int/float     defining(using xnumber.xnumber for floating like 31.0)
+					3 %d, x = [Defining digits=integers(x) for d]
 
-					5 %d, x     like %i in python
-				
-					6 %f, x     like %f in python
+					4 %f, x = [Defining floats(x) for f]
 
-					7 %o, x     octal
+					5 %o, x = [octal]
 
-					9 %x, y     hexadecimal
+					6 %x, y = [hexadecimal]
 
-					10 %c, x     character
+					7 %c, x = [character]
 
-					11 %s, x     character string 
+					8 %s, x = [character string]
 
-					12 %%, x     itself
-
-					13 if (x) {y};
-
-					14 else {x};
-					
-					15 #define x y     defining x in every type of y can called"""
-
-				"2 Making Functions":
-
-					"0 x() {'x'\n}     define x as a function(also need int too)"
-
-				"3 iterations":
-
-					"""0 while (x <=>= y) {xxasewe}     Working with boolean(True&False)
-
-					1 for (it is; while it is; do this) {althogh do this is too};"""
+					9 %%, x = [itself]
 			
-				"4 Libraries Functions":	
+				1 How to use:
 
-					"0 #include x     x = standard library like <stdio.h> for printf()"
+					0 Basic = [printf("Operators", Define1, Define2, ...)]
 
-					"1 #include <stdio.h>":
+					1 Advance = [NumberOperation, Example = printf("3d\t5.2f", var0, var1)]
 
-						"""0 printf('x\n');     
+			2 Defining:
+
+				0 Variable:
+
+					0 Specific type:
+
+						0 X:
+
+							0 int = [Called by %d]
+
+							1 Float = [Called by %f]
+
+							2 long = [Character counting, Dalled by %d]
+
+							3 double = [Character counting, Called by %f]
+
+						0 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)]
+
+					1 Every types:
+
+						0 #define x y = [defining y in every type of x can called, Example = #define mohammad gpb147]
+
+				2 Function:
+
+					0 int/flot x() {'x'\n} = [define x as a function(also need int too)]
+
+			3 Statement:
+
+				0 if (x) {y};
+
+				1 else {x};
+
+			4 iterations:
+
+				0 while (x <= >= == y) {xxasewe} = [Working with boolean(True&False)]
+
+				1 for (it is; while it is; do this) {althogh do this is too};
+				
+			5 Input&Output:
+			
+				0 getchar() = [input]
+
+				1 putchar(x) = [output]
+
+			6 Array:
+			
+			7 Standard libraries:	
+
+				0 #include x = [x = standard library like <stdio.h> for printf()]
+
+				1 #include <stdio.h>:
+	
+					0 printf('x\n');     
 						
-						1 scanf('\n');     reading output in input"""
+					1 scanf('\n'); = [Reading input]
+
+					2 EOF = [End Of File]
+
+				2 #include <ctype.h>;
+
+				3 #include <string.h>;
+
+				4 #include <math.h>;
+
+				5 #include <stdlib.h>;
+
+				6 #include <assert.h>;
+
+				7 #include <stdarg.h>;
+
+				8 #include <setjmp.h>;
+
+				9 #include <signal.h>;
+
+				10 #include <time.h>;
+
+				11 #include <limits.h>; 
+
+				12 #include <float.h>;
 					
-			"1 Libraries of C":
+			8 Libraries:
 
-
-
-		"4 Spaces"
+				0
+		3 Spaces"""
 ```
