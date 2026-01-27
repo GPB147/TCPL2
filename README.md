@@ -1,5 +1,5 @@
 ```python
-"C": "Page 21"
+"C": "Page 27"
 
 	"0 C(Short)" = {
 
@@ -9,7 +9,7 @@
 
 		"""0 Numbers = [..., 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...]
 		
-		1 Symboles = \ () {} ' , <> # ; \\ /**/ = != >= <= * + - / \" += -= *=''' ++ -- """
+		1 Symboles = \ () {} ' , <> # ; \\ /**/ = != >= <= * + - / \" += -= *=''' ++ -- == || && ** """
 
 		"""2 Words =  
 	
@@ -38,6 +38,8 @@
 					8 %s, x = [character string]
 
 					9 %%, x = [itself]
+
+					10 %ld, x = [Long digit]
 			
 				1 How to use:
 
@@ -57,7 +59,7 @@
 
 							1 Float = [Called by %f]
 
-							2 long = [Character counting, Dalled by %d]
+							2 long = [Character counting, Dalled by %ld]
 
 							3 double = [Character counting, Called by %f]
 
@@ -67,15 +69,23 @@
 
 						0 #define x y = [defining y in every type of x can called, Example = #define mohammad gpb147]
 
-				2 Function:
+				1 Function:
 
-					0 int/flot x() {'x'\n} = [define x as a function(also need int too)]
+					0 Type Name(type name, type name, ...) {'x'\n} = [defining x to Name]
+
+					1 return x/0
+
+					2 How to use = [Must to define function first like every variable in C, Example = type function(type function ... if have)]
 
 			3 Statement:
 
 				0 if (x) {y};
 
 				1 else {x};
+
+				2 else if (x) {y};
+
+				3 switch
 
 			4 iterations:
 
@@ -90,6 +100,8 @@
 				1 putchar(x) = [output]
 
 			6 Array:
+
+				0 x[Number] = z = [Number = number -1 actually, Example = int dig[10] actually is dig 0 to 9]
 			
 			7 Standard libraries:	
 
