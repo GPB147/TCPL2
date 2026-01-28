@@ -1,5 +1,5 @@
 ```python
-"C": "Page 27"
+"C": "Page 31"
 
 	"0 C(Short)" = {
 
@@ -19,27 +19,51 @@
 
 				0 What:
 
-					0\n = [new line]
+					0 \:
 
-					1 \t = [tab]
+						0 \n = [new line]
 
-					2 \b = [backspace=back writing]
+						1 \t = [tab]
 
-					3 %d, x = [Defining digits=integers(x) for d]
+						2 \v = [Vertical tab]
 
-					4 %f, x = [Defining floats(x) for f]
+						3 \b = [backspace=back writing]
 
-					5 %o, x = [octal]
+						4 \r
 
-					6 %x, y = [hexadecimal]
+						5 \f
 
-					7 %c, x = [character]
+						6 \a
 
-					8 %s, x = [character string]
+						7 \\
 
-					9 %%, x = [itself]
+						8 \?
 
-					10 %ld, x = [Long digit]
+						9 \'
+
+						10 \"
+
+						11 \ooo = [Octal number]
+
+						12 \xhh = [Hex number]
+
+					1 %:
+
+						0 %d, x = [Defining digits=integers(x) for d]
+
+						1 %f, x = [Defining floats(x) for f]
+
+						2 %o, x = [octal]
+
+						3 %x, y = [hexadecimal]
+
+						4 %c, x = [character]
+
+						5 %s, x = [string]
+
+						6 %%, x = [itself]
+
+						7 %ld, x = [Long digit]
 			
 				1 How to use:
 
@@ -55,15 +79,25 @@
 
 						0 X:
 
-							0 int = [Called by %d]
+							0 int = [Number, Called by %d]
 
-							1 Float = [Called by %f]
+							1 Float = [Number with decimal, Called by %f]
 
-							2 long = [Character counting, Dalled by %ld]
+							2 long = [Called by %ld]
 
-							3 double = [Character counting, Called by %f]
+							3 short
 
-						0 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)]
+							4 double = [Called by %f]
+
+							5 char = [Every character(in string), Called by %s]
+
+							6 void
+
+							7 signed
+
+							8 unsigned
+
+						1 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)]
 
 					1 Every types:
 
@@ -71,11 +105,15 @@
 
 				1 Function:
 
-					0 Type Name(type name, type name, ...) {'x'\n} = [defining x to Name]
+					0 Making:
 
-					1 return x/0
+						0 Type Name(type name, type name, ...) {'x'\n} = [defining x to Name]
 
-					2 How to use = [Must to define function first like every variable in C, Example = type function(type function ... if have)]
+						1 return x/0
+
+					2 Defining:
+
+						0 Type Name(type name, type name, ...); = [Must to define in fist of program]
 
 			3 Statement:
 
