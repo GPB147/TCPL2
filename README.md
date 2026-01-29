@@ -59,7 +59,11 @@
 
 						4 %c, x = [Single character]
 
+<<<<<<< HEAD
 						5 %s, x = [String]
+=======
+						5 %s, x = [Character string]
+>>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
 
 						6 %%, x = [itself]
 
@@ -117,6 +121,7 @@
 
 								0 void = [No memory, Used for no data]				
 						
+<<<<<<< HEAD
 								1 char = [1 byte %s or %c, Used for characters / raw bytes]
 
 								2 int = [Less bytes %d, Used for general integers(characters + general integers)]
@@ -124,6 +129,15 @@
 								3 Float = [More bytes, Called by %f, Used for decimal numbers(...)]
 
 								4 double = [Very more bytes, Called by %f, Used for more precise decimals(...)]
+=======
+								1 char = [1 byte, Called by %s or %c, Used for characters / raw bytes]
+
+								2 int = [4 bytes, Called by %d, Used for general integers(characters + general integers)]
+
+								3 Float = [4 bytes, Called by %f, Used for decimal numbers(...)]
+
+								4 double = [8 bytes, Called by %f, Used for more precise decimals(...)]
+>>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
 
 							3 Third:
 
@@ -137,6 +151,7 @@
 
 								4 singed int = [Called by %d]
 
+<<<<<<< HEAD
 								5 unsigned int = [Called by %u or %d]
 
 								6 long double = [Called by %Lf]
@@ -145,6 +160,12 @@
 
 								8 unsigned long = [Called by %lu]
 
+=======
+								5 unsigned int = [Called by %d]
+
+								6 long double = [Called by %Lf]
+
+>>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
 						2 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)]
 
 						3 (X)x = [x already have type but we want to use x in different type so we use this style of it]
