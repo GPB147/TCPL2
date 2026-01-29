@@ -29,7 +29,7 @@ int main()
 
     }
 
-    if (max == 0)
+    if (max > 0)
     {
 
         printf("%s", lon);
@@ -43,19 +43,19 @@ int main()
 int getline(char s[], int lim)
 {
 
-    int c, i;
+    int i, c;
 
     for (i = 0; i < lim-1 && (c = getchar()) != EOF && c != '\n'; ++i)
     {
 
-        s[i] = c;
+        s[i] = (char)c;
 
     }
 
     if (c == '\n')
         {
 
-        s[i] = c;
+        s[i] = (char)c;
         ++i;
 
         }
