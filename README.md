@@ -1,7 +1,16 @@
 ```python
-"C": "Page 35"
+"C": "Page 43"
 
-	"0 C(Short)" = {
+	"0 C(Short)" = 
+	{
+
+		"""0 Chose standard libraries we need
+
+		1 Chose types we need
+
+		2 Coding
+
+		3 """	
 
 	}
 		
@@ -9,7 +18,7 @@
 
 		"""0 Numbers = [..., 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...]
 		
-		1 Symboles = \ () {} ' , <> # ; \\ /**/ = != >= <= * + - / \" += -= *=''' ++ -- == || && ** _ """
+		1 Symboles = \ () {} ' , <> # ; \\ /**/ // = != >= <= * + - / \" += -= *=''' ++ -- == || && ** _ % ! """
 
 		"""2 Words =  
 	
@@ -29,7 +38,7 @@
 
 						3 \b = [backspace=back writing]
 
-						4 \r
+						4 \r = [Return]
 
 						5 \f
 
@@ -43,20 +52,21 @@
 
 						10 \"
 
-						11 \ooo = [Octal number]
+						11 \ooo = [Octal number = Real number of bytes, Example = #define name '\391' or '\002']
 
-						12 \xhh = [Hex number]
+						12 \xhh = [Hexadecimal number, Example = #define name '\xt' or '\x3']
 
 					1 %:
 
-						0 %d, x = [Defining digits=integers(x) for d]
+						0 ("%d", value) = [Defining digits=integers(x) for d]
 
-						1 %f, x = [Defining floats(x) for f]
+						1 ("%f", value) = [Defining floats(x) for f]
 
-						2 %o, x = [octal]
+						2 ("%o", value) = [octal]
 
-						3 %x, y = [hexadecimal]
+						3 ("%x", value) = [hexadecimal]
 
+<<<<<<< HEAD
 						4 %c, x = [Single character]
 
 <<<<<<< HEAD
@@ -64,10 +74,17 @@
 =======
 						5 %s, x = [Character string]
 >>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
+=======
+						4 ("%c", value) = [Single character]
 
-						6 %%, x = [itself]
+						5 ("%s", value) = [String]
+>>>>>>> master
 
-						7 %ld, x = [Long digit]
+						6 ("%%", value) = [itself]
+
+						7 ("%ld", value) = [Long digit]
+
+						8 number % number = [Extra in dividing process, Example = 4 % 400 = 0]
 			
 				1 How to use:
 
@@ -83,6 +100,13 @@
 	
 						0 What = [It's define in self function by default, Short name]
 
+						1 How to use:
+
+							0 type name; name = value
+
+							1 type name = value
+
+
 					1 General(External):
 
 						0 What = [It's define in all functions and everywhere, Long name]
@@ -97,30 +121,29 @@
 
 							1 Every type:
 
-									0 #define name value = [defining value in every type of name can called in first of program, Example = #define mohammad gpb147]
+								0 #define name value = [defining value in every type of name can called in first of program, Example = #define mohammad gpb147]
 
-						2 Why it's not good = [It's heavy because it's allways run and used memory and CPU, Hard to modify program]
+						2 Why it's not a good idea = [It's heavy because it's allways run and used memory and CPU, Hard to modify program]
 
-					0 Types:
+					2 Types:
 
 						0 What = [how the CPU and memory see the data by specific bytes]
 
 						1 X:
 
-							0 First:
+							0 Knowing:
 
-								0 short = [2 bytes, Called by %hd, Used for small integers, Just int]
+								0 short = [Small bytes, Called by %hd, Used for small integers, Just int]
 
-								1 long = [4 or 8 bytes, Called by %ld, Used for bigger integers, Just int and double]
+								1 long = [Big bytes, Called by %ld, Used for bigger integers, Just int and double]
 
 								2 signed = [Modifier, Used for allows negative, Just char and int]
 
-								3 unsigned = [Modifier, Called by %u, Used for only positive, Just char and int]
+								3 unsigned = [Modifier, Called by %u, Used for only positive, Just char and int]	
 
-							1 Second:
-
-								0 void = [No memory, Used for no data]				
+								4 const = [Called by %, Used for, All]	
 						
+<<<<<<< HEAD
 <<<<<<< HEAD
 								1 char = [1 byte %s or %c, Used for characters / raw bytes]
 
@@ -131,26 +154,34 @@
 								4 double = [Very more bytes, Called by %f, Used for more precise decimals(...)]
 =======
 								1 char = [1 byte, Called by %s or %c, Used for characters / raw bytes]
+=======
+							1 Using:
+>>>>>>> master
 
-								2 int = [4 bytes, Called by %d, Used for general integers(characters + general integers)]
+								0 void = [No memory, Used for no data]
 
-								3 Float = [4 bytes, Called by %f, Used for decimal numbers(...)]
+								1 char = [1 byte %s or %c, Used for characters(String, "") / raw bytes]
 
+<<<<<<< HEAD
 								4 double = [8 bytes, Called by %f, Used for more precise decimals(...)]
 >>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
+=======
+								2 signed char = [-128 to 127, Called by %hhd]
+>>>>>>> master
 
-							3 Third:
+								3 unsigned char = [0 to 255 values values, Called by %hhu]
 
-								0 signed char = [8 bits=-128 to 127, Called by %c]
+								4 signed short = [Called by %hd]
 
-								1 unsigned char = [8 bits=0 to 255 values values, Called by %c]
+								5 short int = [Called by %hd]
 
-								2 short int = [16 bits, Called by %d]
+								6 unsigned short = [Called by %hu]
 
-								3 long int = [32 bits, Called by %ld]
+								7 singed int = [Called by %d] 
 
-								4 singed int = [Called by %d]
+								8 int = [Called by %d, Used for general integers(Character + general integer(Numbers, ''))]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 								5 unsigned int = [Called by %u or %d]
 
@@ -162,13 +193,63 @@
 
 =======
 								5 unsigned int = [Called by %d]
+=======
+								9 unsigned int = [Called by %u]
+>>>>>>> master
 
-								6 long double = [Called by %Lf]
+								10 signed long = [Called by %ld]
 
+<<<<<<< HEAD
 >>>>>>> c0f1f4aed30485d1af85c1453aad29a4a0789f50
 						2 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)]
+=======
+								11 long int = [Called by %ld]
+>>>>>>> master
 
-						3 (X)x = [x already have type but we want to use x in different type so we use this style of it]
+								12 unsigned long = [Called by %lu]
+
+								13 signed long long = [Called by %lld]
+
+								14 long long = [Called by %lld]
+
+								15 float = [Called by %f, Used for decimal numbers(...)]
+
+								16 double = [Called by %f, Used for more precise decimals(...)]
+
+								17 long double = [Called by %Lf]
+
+								18 unsigned long int = []
+
+								19 unsigned short int = []
+
+							2 Converting:
+
+								0 To specific type:
+
+									0 By expressions
+
+										0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+
+										1 short to int
+
+									1 By defining:
+
+										0 int to char = [Example = int i; char s; i = s; s = i]
+
+										1 float to int
+
+										2 float to double
+
+									2 By library:
+
+										0 <math.h> = [sqrt((type) name)]
+
+								1 To every type:
+
+									0 (X)x = [x already have a type and we want to change that]
+
+
+						2 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)] 
 							
 				1 Function:
 
@@ -209,8 +290,208 @@
 				0 type name[number] = [Defining this in first of program and we have number-1 array]
 
 				0 name[Number] = z
-			
-			7 Standard libraries:	
+
+			7 Boolean(Enumerations):
+
+				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
+
+			8 Bytes:
+
+				9 9 = [Tab]
+
+				10 10 = [Enter] 
+
+				32 32 = [Space]
+
+				33 33 = [!]
+
+				34 34 = ["]
+
+				35 35 = [#]
+
+				36 36 = [$]
+
+				37 37 = [%]
+
+				38 38 = [&]
+
+				39 39 = [']
+
+				40 40 = [(]
+
+				41 41 = [)]
+
+				42 42 = [*]
+
+				43 43 = [+]
+
+				44 44 = [,]
+
+				45 45 = [-]
+
+				46 46 = [.]
+
+				47 47 = [/]
+
+				48 48 = [0]
+
+				49 49 = [1]
+
+				50 50 = [2]
+
+				51 51 = [3] 
+
+				52 52 = [4]
+
+				53 53 = [5]
+
+				54 54 = [6]
+
+				55 55 = [7] 
+
+				56 56 = [8]
+
+				57 57 = [9]
+
+				58 58 = [:]
+
+				59 59 = [;]
+
+				60 60 = [<]
+
+				61 61 = [=]
+
+				62 62 = [>]
+
+				63 63 = [?]
+
+				64 64 = [@]
+
+				65 65 = [A]
+
+				66 66 = [B]
+
+				67 67 = [C] 
+
+				68 68 = [D]
+
+				69 69 = [E]
+
+				70 70 = [F]
+
+				71 71 = [G] 
+
+				72 72 = [H]
+
+				73 73 = [I]
+
+				74 74 = [J]
+
+				75 75 = [K] 
+
+				76 76 = [L]
+
+				77 77 = [M]
+
+				78 78 = [N]
+
+				79 79 = [O]
+
+				80 80 = [P] 
+
+				81 81 = [Q]
+
+				82 82 = [R]
+
+				83 83 = [S]
+
+				84 84 = [T] 
+
+				85 85 = [U]
+
+				86 86 = [V]
+
+				87 87 = [W]
+
+				88 88 = [X] 
+
+				89 89 = [Y]
+
+				90 90 = [Z]
+
+				91 91 = [[]
+
+				92 92 = [\]
+
+				93 93 = []]
+
+				94 94 = [^]
+
+				95 95 = [_]
+
+				96 96 = [`]
+
+				97 97 = [a]
+
+				98 98 = [b] 
+
+				99 99 = [c]
+
+				100 100 = [d]
+
+				101 101 = [e]
+
+				102 102 = [f] 
+
+				103 103 = [g]
+
+				104 104 = [h]
+
+				105 105 = [i]
+
+				106 106 = [j] 
+
+				107 107 = [k]
+
+				108 108 = [l]
+
+				109 109 = [m]
+
+				110 110 = [n]
+
+				111 111 = [o]
+
+				112 112 = [p]
+
+				113 113 = [q] 
+
+				114 114 = [e]
+
+				115 115 = [s]
+
+				116 116 = [t]
+
+				117 117 = [u] 
+
+				118 118 = [v]
+
+				119 119 = [w]
+
+				120 120 = [x]
+
+				121 121 = [y]
+
+				122 122 = [z] 
+
+				123 123 = [{]
+
+				124 124 = [|]
+
+				125 125 = [}]
+
+				126 126 = [~]
+			 
+			9 Standard libraries:	
 
 				0 #include x = [x = standard library like <stdio.h> for printf()]
 
@@ -222,31 +503,33 @@
 
 					2 EOF = [End Of File]
 
-					3 header 
+				2 #include <ctype.h>
 
-				2 #include <ctype.h>;
+				3 #include <string.h>:
 
-				3 #include <string.h>;
+					0 strlen(... if have) {x} = [String counter function]
 
-				4 #include <math.h>;
+				4 #include <math.h>:
 
-				5 #include <stdlib.h>;
+					0 sqrt((type) name) = [Converting name's type to type]
 
-				6 #include <assert.h>;
+				5 #include <stdlib.h>
 
-				7 #include <stdarg.h>;
+				6 #include <assert.h>
 
-				8 #include <setjmp.h>;
+				7 #include <stdarg.h>
 
-				9 #include <signal.h>;
+				8 #include <setjmp.h>
 
-				10 #include <time.h>;
+				9 #include <signal.h>
 
-				11 #include <limits.h>; 
+				10 #include <time.h>
 
-				12 #include <float.h>;
+				11 #include <limits.h> 
+
+				12 #include <float.h>
 					
-			8 Libraries:
+			10 Libraries:
 
 				0
 		3 Spaces"""
