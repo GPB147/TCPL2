@@ -10,12 +10,12 @@ int main()
     int e = 3;  
     int f = 3;
 
-    a = a & 17;
-    b = b | 17;
-    c = c ^ 17;
-    d = d << 17;
-    e = e >> 17;
-    f = f & ~17;
+    a = a & 4;
+    b = b | 4;
+    c = c ^ 4;
+    d = d << 4;
+    e = e >> 4;
+    f = ~f ;
 
     printf("& = %d\n| = %d\n^ = %d\n<< = %d\n>> = %d\n& ~ = %d\n", a, b, c, d, e, f);
 

@@ -24,17 +24,21 @@
 
 			"""1 Bit manipulation: 
 
-				0 & = [Bitwise AND]
+				0 ValueNumber0 & ValueNumber1 = [If rightest number of bit of both values are 1 so result is 1 and for other result is 0]
 
-				1 | = [Bitwise inclusive OR]
+				1 ValueNumber0 | ValueNumber1 = [Change 0 bit number in every of both values to each 1 they have in same priority]
 
-				2 ^ = [Bitwise exclusive OR]
+				2 ValueNumber0 ^ ValueNumber1 = [Bit number in result is 1 if in same priority both have different numbers and for other result is 0]
 
-				3 << = [Left shift]
+				3 ValueNumber0 << TimesNumber = [Move all bits of value TimesNumber step left]
 
-				4 >> = [Right shift]
+				4 ValueNumber0 >> TimesNumber = [Move all bits of value TimesNumber step right]
 
-				5 ~ = [One's complement(unary)]"""
+				5 ValueNumber0~ = [Change all 0 bits to 1 and all 1 bits to 0]
+
+				6 ValueNumber0 <<= TimesNumber = [ValueNumber = ValueNumber << TimesNumber]
+
+				7 ValueNumber >>= TimesNumber = [ValueNumber = ValueNumber >> TimesNumber]"""
 
 		"""2 Words =  
 	
@@ -185,8 +189,6 @@
 								7 unsigned short = [Called by %hu]
 
 								8 unsigned long = [Called by %lu]
-
-								5 unsigned int = [Called by %d]
 
 								9 unsigned int = [Called by %u]
 
