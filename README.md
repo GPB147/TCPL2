@@ -1,5 +1,5 @@
 ```python
-"C": "Page 44"
+"C": "Page 60"
 
 	"0 C(Short)" = 
 	{
@@ -10,7 +10,7 @@
 
 		2 Coding
 
-		3 """	
+		3 Runing program or programs by cc name.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -212,6 +212,8 @@
 
 								19 unsigned short int = []
 
+								20 long long unsigned int = []
+
 							2 Converting:
 
 								0 To specific type:
@@ -232,7 +234,19 @@
 
 									2 By library:
 
-										0 <math.h> = [sqrt((type) name)]
+										0 <math.h>:
+
+											0 sqrt((type) name)
+
+										1 <ctype.h>:
+
+											0 atot(... if have) { x }
+
+											1 itoa(... if have) { x }
+
+											2 atof(... if have_ { x }
+
+					
 
 								1 To every type:
 
@@ -255,19 +269,27 @@
 
 			3 Statement:
 
-				0 if (x) {y};
+				0 if (x) {y}
 
-				1 else {x};
+				1 else {y}
 
-				2 else if (x) {y};
+				2 else if (x) {y}
 
-				3 switch
+				3 switch (x) { case y: { z } default: { w } } = [Switching x to w by default and to z just if y happen, break working for iterations and switch in cases]
 
 			4 iterations:
 
 				0 while (x <= >= == y) {xxasewe} = [Working with boolean(True&False)]
 
 				1 for (it is; while it is; do this) {althogh do this is too};
+
+				2 do { x } while (y);
+
+				3 goto x; = [Used few times]
+
+				4 break; = [Working for iterations and switch in case]
+
+				5 continue;
 				
 			5 Input&Output:
 			
@@ -285,7 +307,7 @@
 
 				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
 
-				1 Expression ? True : False = [If expression is true do left one(True) thing and if is false do right(False) thing]
+				1 Expression ? True : False; = [If expression is true do left one(True) thing and if is false do right(False) thing]
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
@@ -559,11 +581,21 @@
 
 					2 EOF = [End Of File]
 
-				2 #include <ctype.h>
+				2 #include <ctype.h>:
+
+					0 isspace()
+
+					1 isdigit()
+
+					2 atoi(.. if have) { x } = [Converting string to integer]
+
+					3 itoa(... if have) { x } [Converting integer to string]
+
+					4 atof(... if have_ { x } = [Converting string to double]
 
 				3 #include <string.h>:
 
-					0 strlen(... if have) {x} = [String counter function]
+					0 strlen(... if have) { x } [String counter function]
 
 				4 #include <math.h>:
 
