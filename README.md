@@ -20,11 +20,11 @@
 		
 		1 Symboles:
 
-			0 Normal = \ () {} ' , <> # ; \\ /**/ // = != >= <= * + - / \" += -= *=''' ++ -- == || && ** _ % ! """
+			0 Normal = \ () {} ' , <> # ; \\ /**/ // = != >= <= * + - / \" += -= *= &= ^= %= /= >>= <<= ''' ++ -- == || && ** _ % ! -> """
 
 			"""1 Bit manipulation: 
 
-				0 ValueNumber0 & ValueNumber1 = [If rightest number of bit of both values are 1 so result is 1 and for other result is 0]
+				0 ValueNumber0 & ValueNumber1 = [If rightest number of bit of both values are 1 so result is 1 and for lefter than this +1]
 
 				1 ValueNumber0 | ValueNumber1 = [Change 0 bit number in every of both values to each 1 they have in same priority]
 
@@ -284,6 +284,8 @@
 			7 Boolean(Enumerations):
 
 				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
+
+				1 Expression ? True : False = [If expression is true do left one(True) thing and if is false do right(False) thing]
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
