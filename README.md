@@ -1,5 +1,5 @@
 ```python
-"C": "Page 60"
+"C": "Page 69"
 
 	"0 C(Short)" = 
 	{
@@ -8,9 +8,11 @@
 
 		1 Chose types we need
 
-		2 Coding
+		2 Chose byte and bit and value and meaning we need
 
-		3 Runing program or programs by cc name.c name.c name.o name.c ... command"""	
+		3 Coding
+
+		4 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -220,9 +222,25 @@
 
 									0 By expressions
 
-										0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+										0 Normal:
 
-										1 short to int
+											0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+
+											1 short to int
+
+										1 By library:
+
+											0 <math.h>:
+
+												0 sqrt((type) name)
+
+											1 <ctype.h>:
+
+												0 atot(... if have) { x }
+
+												1 itoa(... if have) { x }
+
+												2 atof(... if have_ { x }
 
 									1 By defining:
 
@@ -231,22 +249,6 @@
 										1 float to int
 
 										2 float to double
-
-									2 By library:
-
-										0 <math.h>:
-
-											0 sqrt((type) name)
-
-										1 <ctype.h>:
-
-											0 atot(... if have) { x }
-
-											1 itoa(... if have) { x }
-
-											2 atof(... if have_ { x }
-
-					
 
 								1 To every type:
 
@@ -311,7 +313,7 @@
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
-				0 0 = [\0] = 00000000
+				0 0 = [\0, Nothing, None, Not exist] = 00000000
 
 				1 1 = [Ctrl + A] = 00000001
 
@@ -583,15 +585,13 @@
 
 				2 #include <ctype.h>:
 
-					0 isspace()
+					0 isspace(x) = [If x value number is space like \t or \n or ...]
 
-					1 isdigit()
+					1 isdigit(x) = [If x value number is number llike 0 or 1 or 2 or ...]
 
 					2 atoi(.. if have) { x } = [Converting string to integer]
 
 					3 itoa(... if have) { x } [Converting integer to string]
-
-					4 atof(... if have_ { x } = [Converting string to double]
 
 				3 #include <string.h>:
 
@@ -601,7 +601,9 @@
 
 					0 sqrt((type) name) = [Converting name's type to type]
 
-				5 #include <stdlib.h>
+				5 #include <stdlib.h>:
+
+					0 atof(... if have_ { x } = [Converting string to double]
 
 				6 #include <assert.h>
 
