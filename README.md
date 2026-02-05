@@ -1,18 +1,28 @@
 ```python
-"C": "Page 69"
+"C": "Page 79"
 
 	"0 C(Short)" = 
 	{
 
 		"""0 Chose standard libraries we need
 
-		1 Chose types we need
+		1 Chose byte and bit and value and meaning we need
 
-		2 Chose byte and bit and value and meaning we need
+		2 Chose types and operators we need
 
-		3 Coding
+		3 Chose defining way we need
 
-		4 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
+		4 Chose statements we need
+
+		5 Chose booleans we need
+
+		5 Chose arrays we need
+
+		6 Chose itterations we need
+
+		7 Chose input&outputs we need
+
+		8 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -22,7 +32,7 @@
 		
 		1 Symboles:
 
-			0 Normal = \ () {} ' , <> # ; \\ /**/ // = != >= <= * + - / \" += -= *= &= ^= %= /= >>= <<= ''' ++ -- == || && ** _ % ! -> """
+			0 Normal = \ () {} ' , <> # ; \\ /**/ // = != >= <= * + - / \" += -= *= &= ^= %= /= >>= <<= ''' ++ -- == || && ** _ % ! -> <>"""
 
 			"""1 Bit manipulation: 
 
@@ -103,6 +113,8 @@
 						7 ("%ld", value) = [Long digit]
 
 						8 number % number = [Extra in dividing process, Example = 4 % 400 = 0]
+
+						9 ("%n", value) = [*int]
 			
 				1 How to use:
 
@@ -124,7 +136,6 @@
 
 							1 type name = value
 
-
 					1 General(External):
 
 						0 What = [It's define in all functions and everywhere, Long name]
@@ -139,124 +150,42 @@
 
 							1 Every type:
 
-								0 #define name value = [defining value in every type of name can called in first of program, Example = #define mohammad gpb147]
+								0 Defining:
+
+									0 #define name value = [defining value in every type of name can called in first of program, Example = #define mohammad gpb147]
+
+									1 #define name expression:
+
+										0 Example = [#define Number(i1, i2) ((i1 >= i2) ? i1 : i2);]
+
+										1 #define name(x, y) x ## y = [Distroying distances between x and y, Example = if x = 3 and y = 5 so result is 35]
+
+									2 #undef name
+
+								1 Statement:
+
+									0 #if (expression)
+									    #define name variable/expression
+									#endif
+
+									1 #elif (expression)
+									    #define name variable/expression
+									#endif
+
+									2 #else
+									    #define name variable/expression
+									#endif
+
+									3 #ifdef name
+									    #define name variable/expression
+									#endif
+
+									4 #ifndef name = [If Undef]
+									    #define name variable/expression
+									#endif
 
 						2 Why it's not a good idea = [It's heavy because it's allways run and used memory and CPU, Hard to modify program]
 
-					2 Types:
-
-						0 What = [how the CPU and memory see the data by specific bytes]
-
-						1 X:
-
-							0 Knowing:
-
-								0 short = [Small bytes, Called by %hd, Used for small integers, Just int]
-
-								1 long = [Big bytes, Called by %ld, Used for bigger integers, Just int and double]
-
-								2 signed = [Modifier, Used for allows negative, Just char and int]
-
-								3 unsigned = [Modifier, Called by %u, Used for only positive, Just char and int]	
-
-								4 const = [Called by %, Used for, All]	
-
-							1 Using:
-
-
-								0 void = [No memory, Used for no data]
-
-								1 char = [1 byte %s or %c or %d, Used for characters(String, "") / raw bytes]
-
-								4 double = [8 bytes, Called by %f, Used for more precise decimals(...)]
-
-								2 signed char = [-128 to 127, Called by %hhd]
-
-								3 unsigned char = [0 to 255 values values, Called by %hhu]
-
-								4 signed short = [Called by %hd]
-
-								5 short int = [Called by %hd]
-
-								6 unsigned short = [Called by %hu]
-
-								7 singed int = [Called by %d] 
-
-								8 int = [Called by %d, Used for general integers(Character + general integer(Numbers, ''))]
-
-								5 unsigned int = [Called by %u or %d]
-
-								6 long double = [Called by %Lf]
-
-								7 unsigned short = [Called by %hu]
-
-								8 unsigned long = [Called by %lu]
-
-								9 unsigned int = [Called by %u]
-
-								10 signed long = [Called by %ld]
-
-								11 long int = [Called by %ld]
-
-								12 unsigned long = [Called by %lu]
-
-								13 signed long long = [Called by %lld]
-
-								14 long long = [Called by %lld]
-
-								15 float = [Called by %f, Used for decimal numbers(...)]
-
-								16 double = [Called by %f, Used for more precise decimals(...)]
-
-								17 long double = [Called by %Lf]
-
-								18 unsigned long int = []
-
-								19 unsigned short int = []
-
-								20 long long unsigned int = []
-
-							2 Converting:
-
-								0 To specific type:
-
-									0 By expressions
-
-										0 Normal:
-
-											0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
-
-											1 short to int
-
-										1 By library:
-
-											0 <math.h>:
-
-												0 sqrt((type) name)
-
-											1 <ctype.h>:
-
-												0 atot(... if have) { x }
-
-												1 itoa(... if have) { x }
-
-												2 atof(... if have_ { x }
-
-									1 By defining:
-
-										0 int to char = [Example = int i; char s; i = s; s = i]
-
-										1 float to int
-
-										2 float to double
-
-								1 To every type:
-
-									0 (X)x = [x already have a type and we want to change that]
-
-
-						2 X x, y, z,...; x = ?; y = ?; ... = [defining(using xnumber.xnumber for floating like 31.0)] 
-							
 				1 Function:
 
 					0 Making:
@@ -267,7 +196,128 @@
 
 					2 Defining:
 
-						0 Type Name(type name, type name, ...); = [Must to define in fist of program]
+						0 Type Name(type name, type name, ...); = [Must to define in first of program]
+
+				2 Types:
+
+					0 What = [how the CPU and memory see the data by specific bytes]
+
+					1 X:
+
+						0 Knowing:
+
+							0 short = [Small bytes, Called by %hd, Used for small integers, Just int]
+
+							1 long = [Big bytes, Called by %ld, Used for bigger integers, Just int and double]
+
+							2 signed = [Modifier, Used for allows negative, Just char and int]
+
+							3 unsigned = [Modifier, Called by %u, Used for only positive, Just char and int]	
+
+							4 const = [Called by %, Used for, All]	
+
+						1 Using:
+
+
+							0 void = [No memory, Used for no data]
+
+							1 char = [1 byte %s or %c or %d, Used for characters(String, "") / raw bytes]
+
+							4 double = [8 bytes, Called by %f, Used for more precise decimals(...)]
+
+							2 signed char = [-128 to 127, Called by %hhd]
+
+							3 unsigned char = [0 to 255 values values, Called by %hhu]
+
+							4 signed short = [Called by %hd]
+
+							5 short int = [Called by %hd]
+
+							6 unsigned short = [Called by %hu]
+
+							7 singed int = [Called by %d] 
+
+							8 int = [Called by %d, Used for general integers(Character + general integer(Numbers, ''))]
+
+							5 unsigned int = [Called by %u or %d]
+
+							6 long double = [Called by %Lf]
+
+							7 unsigned short = [Called by %hu]
+
+							8 unsigned long = [Called by %lu]
+
+							9 unsigned int = [Called by %u]
+
+							10 signed long = [Called by %ld]
+
+							11 long int = [Called by %ld]
+
+							12 unsigned long = [Called by %lu]
+
+							13 signed long long = [Called by %lld]
+
+							14 long long = [Called by %lld]
+
+							15 float = [Called by %f, Used for decimal numbers(...)]
+
+							16 double = [Called by %f, Used for more precise decimals(...)]
+
+							17 long double = [Called by %Lf]
+
+							18 unsigned long int = []
+
+							19 unsigned short int = []
+
+							20 long long unsigned int = []
+
+				3 Converting:
+
+					0 To specific type:
+
+						0 By expressions
+
+							0 Normal:
+
+								0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+
+								1 short to int
+
+							1 By library:
+
+								0 <math.h>:
+
+									0 sqrt((type) name)
+
+								1 <ctype.h>:
+
+									0 atot(... if have) { x }
+
+									1 itoa(... if have) { x }
+
+									2 atof(... if have_ { x }
+
+						1 By defining:
+
+							How word = [Define up to down and after that down to up and after that return upest]
+
+							0 int to char = [Example = int i; char s; i = s; s = i]
+
+							1 float to int
+
+							2 float to double
+
+					1 To every type:
+
+						0 (X)x = [x already have a type and we want to change that]
+
+				4 Static:
+
+					0 static type name = [Making private globals or locals, Use for variables and functions]
+
+				5 Register:
+
+					0 register type name = [Store name in CPU register for faster access]
 
 			3 Statement:
 
@@ -278,6 +328,8 @@
 				2 else if (x) {y}
 
 				3 switch (x) { case y: { z } default: { w } } = [Switching x to w by default and to z just if y happen, break working for iterations and switch in cases]
+
+				4 goto = [Use very few times]
 
 			4 iterations:
 
@@ -301,15 +353,45 @@
 
 			6 Array:
 
-				0 type name[number] = [Defining this in first of program and we have number-1 array]
+				0 type name[Number]; = [Defining this in first of program and we have number-1 array]
 
-				0 name[Number] = z
+				1 name[Number] = z;
+
+				2 type name[] = { x , y, z, ... };
 
 			7 Boolean(Enumerations):
 
 				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
 
 				1 Expression ? True : False; = [If expression is true do left one(True) thing and if is false do right(False) thing]
+
+			8 Pointers=Linkers=Addresses:
+
+				0 What = [Linked(Pointed) a value to a address like arrays and bytes and memory]
+	
+				1 How to work:
+
+					0 type *name;:
+
+						0 What = [name become a linker(pointer) forever by this type]
+
+						1 *:
+
+							0 Pointer type:
+
+								0 int * = [Called by %n] 
+
+								1 
+
+					1 name = &variable;:
+
+						0 What = [name going to link(Address) to this variable]
+
+						1 & = [Pointer type]
+
+					2 *name = y(string/digit/float/variable) = [name linked(save addredd) to y]
+
+					3 variable = *name = [link(Address) save to variable]
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
