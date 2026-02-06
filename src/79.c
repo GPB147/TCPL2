@@ -18,6 +18,6 @@ int main()
     *ip = 3;
     ip = &s[0];
 
-    printf("ip = %n\ni1 = %d\ni2 = %d\n", ip, i1, i2);
+    printf("ip = %p\ni1 = %d\ni2 = %d\n", (void *)ip, i1, i2);
 
 }
