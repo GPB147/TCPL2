@@ -1,5 +1,5 @@
 ```python
-"C": "Page 79"
+"C": "Page 81"
 
 	"0 C(Short)" = 
 	{
@@ -180,7 +180,7 @@
 									    #define name variable/expression
 									#endif
 
-									4 #ifndef name = [If Undef]
+									4 #ifndef name = [if not define]
 									    #define name variable/expression
 									#endif
 
@@ -219,7 +219,7 @@
 						1 Using:
 
 
-							0 void = [No memory, Used for no data]
+							0 void = [No memory, Used for no data and every types]
 
 							1 char = [1 byte %s or %c or %d, Used for characters(String, "") / raw bytes]
 
@@ -365,33 +365,37 @@
 
 				1 Expression ? True : False; = [If expression is true do left one(True) thing and if is false do right(False) thing]
 
-			8 Pointers=Linkers=Addresses:
+			8 Pointers=Linkers=Addresses=Chain:
 
-				0 What = [Linked(Pointed) a value to a address like arrays and bytes and memory]
+				0 What = [Linked(Pointed) a variable to a address like arrays and bytes and memory in chain way]
 	
 				1 How to work:
 
 					0 type *name;:
 
-						0 What = [name become a linker(pointer) forever by this type]
+						0 What = [Access to name in this type]
 
 						1 *:
 
-							0 Pointer type:
+							0 Access or Modify the value of the address(a type):
 
-								0 int * = [Called by %n] 
+								0 char * = [Called by %s]
 
-								1 
+								0 int * = [For *name called by %d and for name called by %p with (void *)] 
+
+								1 void * = [Called by %p] 
 
 					1 name = &variable;:
 
-						0 What = [name going to link(Address) to this variable]
+						0 What = [Save the address of variable in name]
 
-						1 & = [Pointer type]
+						1 & = [Getting addresses of variables]
 
-					2 *name = y(string/digit/float/variable) = [name linked(save addredd) to y]
+					2 *name = y(string/digit/float/variable); = [Modify value of address of name to y]
 
-					3 variable = *name = [link(Address) save to variable]
+					3 variable = *name; = [Save mofdify value of address of name in the variable]
+
+					4 ...
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
