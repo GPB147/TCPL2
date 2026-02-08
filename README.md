@@ -345,6 +345,8 @@
 
 				2 type name[] = { x , y, z, ... };
 
+				3 type name[Number0][Number1] = {x, y, z, ... }, { x1, y1, z1, ... }, ...; = [Number0 show rows of array and number1 show the columns, Number of array start of 1(not 0)]
+
 			7 Boolean(Enumerations):
 
 				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
@@ -383,7 +385,9 @@
 
 					4 name = "x"; = [Strings are addresses actually("Everythin here"), Need to name be char]
 
-					5 ...;
+					5 type name [Number0][Number1] = {x, y, z, ... }, { x1, y1, z1, ... }, ...; = [Number0 show rows of array and number1 show the columns, Number of array start of 0] ;
+
+					6 ...;
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 

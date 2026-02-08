@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/0 Plans/1 Job(Money)/3 Growth/0 Git, GitHub/1 Repos/TCPL2/src",
-      "program": "e:/0 Plans/1 Job(Money)/3 Growth/0 Git, GitHub/1 Repos/TCPL2/src/build/Debug/outDebug",
+      "cwd": "e:/0 Plans/1 Job(Money)/3 Growth/0 Git, GitHub/1 Repos/TCPL2/src/0-100",
+      "program": "e:/0 Plans/1 Job(Money)/3 Growth/0 Git, GitHub/1 Repos/TCPL2/src/0-100/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
