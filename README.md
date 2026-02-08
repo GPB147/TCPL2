@@ -1,28 +1,14 @@
 ```python
-"C": "Page 81"
+"C": "Page 91"
 
 	"0 C(Short)" = 
 	{
 
 		"""0 Chose standard libraries we need
 
-		1 Chose byte and bit and value and meaning we need
+		1 Coding
 
-		2 Chose types and operators we need
-
-		3 Chose defining way we need
-
-		4 Chose statements we need
-
-		5 Chose booleans we need
-
-		5 Chose arrays we need
-
-		6 Chose itterations we need
-
-		7 Chose input&outputs we need
-
-		8 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
+		2 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -379,7 +365,7 @@
 
 							0 Access or Modify the value of the address(a type):
 
-								0 char * = [Called by %s]
+								0 char * = [For *name called by %d and for name called by %s]
 
 								0 int * = [For *name called by %d and for name called by %p with (void *)] 
 
@@ -395,7 +381,9 @@
 
 					3 variable = *name; = [Save mofdify value of address of name in the variable]
 
-					4 ...
+					4 name = "x"; = [Strings are addresses actually("Everythin here"), Need to name be char]
+
+					5 ...;
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
@@ -669,6 +657,8 @@
 
 					2 EOF = [End Of File]
 
+					3 NULL = [0, \0, Nothing, Haven't any meaning]
+
 				2 #include <ctype.h>:
 
 					0 isspace(x) = [If x value number is space like \t or \n or ...]
@@ -677,11 +667,15 @@
 
 					2 atoi(.. if have) { x } = [Converting string to integer]
 
-					3 itoa(... if have) { x } [Converting integer to string]
+					3 itoa(... if have) { x } = [Converting integer to string]
 
 				3 #include <string.h>:
 
-					0 strlen(... if have) { x } [String counter function]
+					0 strlen(... if have) { x } = [String counter function]
+
+					1 strcpy(... if have) { x } 
+
+					2 strcmp(... if have) { x } 
 
 				4 #include <math.h>:
 
@@ -695,15 +689,19 @@
 
 				7 #include <stdarg.h>
 
-				8 #include <setjmp.h>
+				8 #include <stddef.h>:
 
-				9 #include <signal.h>
+					0 ptrdiff_t = [Special type for big pointers]
 
-				10 #include <time.h>
+				9 #include <setjmp.h>
 
-				11 #include <limits.h> 
+				10 #include <signal.h>
 
-				12 #include <float.h>
+				11 #include <time.h>
+
+				12 #include <limits.h> 
+
+				13 #include <float.h>
 					
 			10 Libraries:
 
