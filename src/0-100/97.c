@@ -2,7 +2,7 @@
 
 #define NUMBER 20
 
-int s[3][4]=   
+int s[3][5]=   
 {
 
     {0, 1, 2, 3},

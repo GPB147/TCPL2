@@ -3,7 +3,7 @@
 char main()
 {
 
-    char *ip[2][5] = 
+    char *ip[3][8] = 
     {
 
         {
