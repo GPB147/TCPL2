@@ -1,5 +1,5 @@
 ```python
-"C": "Page 91"
+"C": "Page 101"
 
 	"0 C(Short)" = 
 	{
@@ -345,6 +345,8 @@
 
 				2 type name[] = { x , y, z, ... };
 
+				3 type name[Number0][Number1] = {x, y, z, ... }, { x1, y1, z1, ... }, ...; = [Number0 show rows of array and number1 show the columns, Number of array start of 1(not 0) and can be more than number of values(x y z x1 y2 ...)]
+
 			7 Boolean(Enumerations):
 
 				0 enum name { No, Yes }; = [Defining No to 0 and Yes to 1 and ..., Example = enum Home { gpb148 = 20, Michell = 14, Jordan = 5, ... };]
@@ -359,7 +361,7 @@
 
 					0 type *name;:
 
-						0 What = [Access to name in this type]
+						0 What = [Access to name in this type, Very careful to use () in *name]
 
 						1 *:
 
@@ -383,7 +385,17 @@
 
 					4 name = "x"; = [Strings are addresses actually("Everythin here"), Need to name be char]
 
-					5 ...;
+					5 type name [Number0][Number1] = {x, y, z, ... }, { x1, y1, z1, ... }, ...; = [Number0 show rows of array and number1 show the columns, Number of array start of 0 and can be more than number of values(x y z x1 y2 ...)] ;
+
+					6 type **name1 = &name0:
+
+						0 What = [name1 pointed to name0 actually and name0 poninted to a variable or something]
+
+						1 ** = [Pointer to a pointer]
+
+					7 type ***name1 = &name0; = [...]
+
+					8 ...;
 
 			8 1Bytes=8bits(0 and 1)=256Values(0-255):
 
@@ -676,6 +688,8 @@
 					1 strcpy(... if have) { x } 
 
 					2 strcmp(... if have) { x } 
+
+					3 strstr(... if have) { x }
 
 				4 #include <math.h>:
 
