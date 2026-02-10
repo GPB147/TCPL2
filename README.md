@@ -1,5 +1,5 @@
 ```python
-"C": "Page 101"
+"C": "Page 111"
 
 	"0 C(Short)" = 
 	{
@@ -36,7 +36,9 @@
 
 				6 ValueNumber0 <<= TimesNumber = [ValueNumber = ValueNumber << TimesNumber]
 
-				7 ValueNumber >>= TimesNumber = [ValueNumber = ValueNumber >> TimesNumber]"""
+				7 ValueNumber >>= TimesNumber = [ValueNumber = ValueNumber >> TimesNumber]
+
+			2 priority = [(), ., *, []]"""
 
 		"""2 Words =  
 	
@@ -307,15 +309,19 @@
 
 			3 Statement:
 
-				0 if (x) {y}
+				0 Shapes:
 
-				1 else {y}
+					0 if (x) {y}
 
-				2 else if (x) {y}
+					1 else {y}
 
-				3 switch (x) { case y: { z } default: { w } } = [Switching x to w by default and to z just if y happen, break working for iterations and switch in cases]
+					2 else if (x) {y}
 
-				4 goto = [Use very few times]
+					3 switch (x) { case y: { z } default: { w } } = [Switching x to w by default and to z just if y happen, break working for iterations and switch in cases]
+
+					4 goto = [Use very few times]
+
+				1 Statements must to use in functions
 
 			4 iterations:
 
@@ -397,7 +403,37 @@
 
 					8 ...;
 
-			8 1Bytes=8bits(0 and 1)=256Values(0-255):
+			8 Structure:
+
+				0 What = [Making a variable of type holders, struct is a type]
+
+				0 Process:
+
+					0 struct name { type0 name0; type1 name1; ...; }; = [names can be same(No conflict), Wa can define name after '}' for exampe = struct val { int age; } *ip;]
+		
+					1 For variable:
+
+						1 struct name namex(or *namex or namex[]); = [Access by defining or make values for name by priority by defining, Example for make value = struct val v0 = { "gpb14", 25, "trust" };]
+
+						2 namex(or (*namex)).name0/name1/name... = value; = [Making a value for this name0 or name1 or ...]
+
+					2 For function:
+
+						1 struct name namex(... if have) { coding } = [Define name to namex(Function) to use it and coding]
+
+				1 struct name1 { struct name0 namex0 } = [In this situation for must to call namex1.namex0.variable_name = value;]
+
+				2 struct name0 v1 = struct name0 f0(x, y) = [We can save strcutc(Variable/Function) in a struct(Nothing else)]
+
+				2 struct name0 namex, *namey; = [We can define more than one variable to name0]
+
+				3 pointer(without *)->name0/name1/... = [For pointing to a type for pointers in * way we can write (*pointer).name0/... or pointer->name0/...]
+
+				4 *pointer->name0/name1/... = [Use when name0/name1/.. be a * type]
+
+				5 struct name0 namex[] = { x, y, ... } = [List(namex[]) going to add values exist in { x, y, ... } to types in name by priority and when done going do that at first]
+
+			9 1Bytes=8bits(0 and 1)=256Values(0-255):
 
 				0 0 = [\0, Nothing, None, Not exist] = 00000000
 
@@ -657,7 +693,7 @@
 
 				128 128-255 = [Haven't] = 10000000-11111111
 			 
-			9 Standard libraries:	
+			10 Standard libraries:	
 
 				0 #include x = [x = standard library like <stdio.h> for printf()]
 
@@ -677,9 +713,13 @@
 
 					1 isdigit(x) = [If x value number is number llike 0 or 1 or 2 or ...]
 
-					2 atoi(.. if have) { x } = [Converting string to integer]
+					2 isalpha(x) = [If x value number is words]
 
-					3 itoa(... if have) { x } = [Converting integer to string]
+					3 isalnum(x) = []
+
+					4 atoi(.. if have) { x } = [Converting string to integer]
+
+					5 itoa(... if have) { x } = [Converting integer to string]
 
 				3 #include <string.h>:
 
@@ -717,7 +757,7 @@
 
 				13 #include <float.h>
 					
-			10 Libraries:
+			11 Libraries:
 
 				0
 		3 Spaces"""
