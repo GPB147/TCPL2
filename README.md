@@ -1,5 +1,5 @@
 ```python
-"C": "Page 111"
+"C": "Page 121"
 
 	"0 C(Short)" = 
 	{
@@ -259,51 +259,55 @@
 
 							20 long long unsigned int = []
 
-				3 Converting:
+					2 Converting:
 
-					0 To specific type:
+						0 To specific type:
 
-						0 By expressions
+							0 By expressions
 
-							0 Normal:
+								0 Normal:
+	
+									0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+	
+									1 short to int
+		
+								1 By library:
 
-								0 char to int = [Example = char s[x]; if (s[i] >= '0' && s[i] <= '9')]
+									0 <math.h>:
 
-								1 short to int
+										0 sqrt((type) name)
 
-							1 By library:
+									1 <ctype.h>:
 
-								0 <math.h>:
+										0 atot(... if have) { x }
 
-									0 sqrt((type) name)
+										1 itoa(... if have) { x }
 
-								1 <ctype.h>:
+										2 atof(... if have_ { x }
 
-									0 atot(... if have) { x }
+							1 By defining:
 
-									1 itoa(... if have) { x }
+								How word = [Define up to down and after that down to up and after that return upest]
 
-									2 atof(... if have_ { x }
+								0 int to char = [Example = int i; char s; i = s; s = i]
 
-						1 By defining:
+								1 float to int
 
-							How word = [Define up to down and after that down to up and after that return upest]
+								2 float to double
 
-							0 int to char = [Example = int i; char s; i = s; s = i]
-
-							1 float to int
-
-							2 float to double
-
-					1 To every type:
+						1 To every type:
 
 						0 (X)x = [x already have a type and we want to change that]
 
-				4 Static:
+					3 Definint types:
+
+						0 typedef type name; = [Add a new name to a existing type, Use capital name, Some types are more than one word like struct x, name can be (*x)(type0, type1, ...) ]
+
+				3 Static:
 
 					0 static type name = [Making private globals or locals, Use for variables and functions]
 
-				5 Register:
+				4 Register:
 
 					0 register type name = [Store name in CPU register for faster access]
 
@@ -401,7 +405,9 @@
 
 					7 type ***name1 = &name0; = [...]
 
-					8 ...;
+					8 * = [Sometimes programmers don't use name or variable or function and just use *]
+
+					9 ...;
 
 			8 Structure:
 
@@ -432,6 +438,10 @@
 				4 *pointer->name0/name1/... = [Use when name0/name1/.. be a * type]
 
 				5 struct name0 namex[] = { x, y, ... } = [List(namex[]) going to add values exist in { x, y, ... } to types in name by priority and when done going do that at first]
+
+			8 Union:
+
+				0 What = [Exactly like struct but in union all types have one same memory space to define values(In struct every type have seprated memory space), So we can't say union un v0 = { 25, "Hello" };]
 
 			9 1Bytes=8bits(0 and 1)=256Values(0-255):
 
@@ -715,7 +725,7 @@
 
 					2 isalpha(x) = [If x value number is words]
 
-					3 isalnum(x) = []
+					3 isalnum(x) = [If x value number be words and numbers]
 
 					4 atoi(.. if have) { x } = [Converting string to integer]
 
@@ -737,7 +747,9 @@
 
 				5 #include <stdlib.h>:
 
-					0 atof(... if have_ { x } = [Converting string to double]
+					0 atof(... if have) { x } = [Converting string to double]
+
+					1 talloc(... if have) { x } 
 
 				6 #include <assert.h>
 
@@ -746,6 +758,8 @@
 				8 #include <stddef.h>:
 
 					0 ptrdiff_t = [Special type for big pointers]
+
+					1 size_t = [Specific type for unsigned integers]
 
 				9 #include <setjmp.h>
 
@@ -760,5 +774,5 @@
 			11 Libraries:
 
 				0
-		3 Spaces"""
+		3 Spaces = [Nodes]"""
 ```
