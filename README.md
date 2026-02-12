@@ -1,14 +1,16 @@
 ```python
-"C": "Page 121"
+"C": "Page 131"
 
 	"0 C(Short)" = 
 	{
 
-		"""0 Chose standard libraries we need
+		"""0 Knowing specific standard libraries
 
-		1 Coding
+		1 Knowing concepts
 
-		2 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
+		2 Knowing specific syntaxes
+
+		3 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -76,13 +78,13 @@
 
 						12 \xhh = [Hexadecimal number, Example = #define name '\xt' or '\x3']
 
-					1 %:
+					1 Formats:
 
 						0 ("%d", value) = [Defining digits=integers(x) for d]
 
 						1 ("%f", value) = [Defining floats(x) for f]
 
-						2 ("%o", value) = [octal]
+						2 ("%o", value) = [Octal]
 
 						3 ("%x", value) = [hexadecimal]
 
@@ -102,7 +104,19 @@
 
 						8 number % number = [Extra in dividing process, Example = 4 % 400 = 0]
 
-						9 ("%n", value) = [*int]
+						9 ("%i", value) = [int]
+
+						10 ("%x", value) = [unsigned hexadecima number]
+
+						11 ("%X", value) = [unsigned hexadecima number]
+
+						12 ("%u", value) = [unsigned decimal number]
+
+						13 ("%e", value) = [double]
+
+						14 ("%g", value) = [double]
+
+						15 ("%G", value) = [double]
 			
 				1 How to use:
 
@@ -343,9 +357,11 @@
 				
 			5 Input&Output:
 			
-				0 getchar() = [input]
+				0 getchar(); = [Input]
 
-				1 putchar(x) = [output]
+				1 putchar(x); = [Output]
+
+				2 printf(x); = [Output, Converting by %]
 
 			6 Array:
 
@@ -356,6 +372,10 @@
 				2 type name[] = { x , y, z, ... };
 
 				3 type name[Number0][Number1] = {x, y, z, ... }, { x1, y1, z1, ... }, ...; = [Number0 show rows of array and number1 show the columns, Number of array start of 1(not 0) and can be more than number of values(x y z x1 y2 ...)]
+
+				4 Points:
+
+					0 Every space = 1 Byte
 
 			7 Boolean(Enumerations):
 
@@ -438,6 +458,8 @@
 				4 *pointer->name0/name1/... = [Use when name0/name1/.. be a * type]
 
 				5 struct name0 namex[] = { x, y, ... } = [List(namex[]) going to add values exist in { x, y, ... } to types in name by priority and when done going do that at first]
+
+				6 struct name namex = {  type name0 : number0; type name1 : number1; ... }; = [Chosing number of bit every type can have]
 
 			8 Union:
 
@@ -705,74 +727,87 @@
 			 
 			10 Standard libraries:	
 
-				0 #include x = [x = standard library like <stdio.h> for printf()]
+				0 What = [Defining codes that already we can write but for being easy we use this]
 
-				1 #include <stdio.h>:
+				1 #include x = [x = standard library like <stdio.h> for printf()]
+
+				2 #include <stdint.h>:
+
+					0 uint8_t
+
+					1 uint16_t
+			
+					2 uint32_t
+
+					3 uint64_t
+
+					4 int32_t
+
+					5 etc
+
+				3 #include <stddef.h>:
+
+					0 size_t
+
+					1 NULL = [Nothing, '\0']
+
+					2 ptrdiff_t
+
+					3 offsetof
+
+				4 #include <stdlib.h>:
+
+					0 malloc
+
+					1 calloc
 	
-					0 printf('x\n');     
-						
-					1 scanf('\n'); = [Reading input]
+					2 realloc
 
-					2 EOF = [End Of File]
+					3 free
 
-					3 NULL = [0, \0, Nothing, Haven't any meaning]
+					4 exit
 
-				2 #include <ctype.h>:
+					5 strtol
 
-					0 isspace(x) = [If x value number is space like \t or \n or ...]
+				5 #include <string.h>:
 
-					1 isdigit(x) = [If x value number is number llike 0 or 1 or 2 or ...]
+					0 memcpy
 
-					2 isalpha(x) = [If x value number is words]
+					1 memmove
 
-					3 isalnum(x) = [If x value number be words and numbers]
+					2 memcmp
 
-					4 atoi(.. if have) { x } = [Converting string to integer]
+					3 memset
 
-					5 itoa(... if have) { x } = [Converting integer to string]
+					4 strlen
 
-				3 #include <string.h>:
+					5 strncmp
 
-					0 strlen(... if have) { x } = [String counter function]
+				6 #include <stdio.h>:
 
-					1 strcpy(... if have) { x } 
+					0 printf("x %y %z", w, q); = [Printing by converting(%)]
 
-					2 strcmp(... if have) { x } 
+					1 snprintf(name, sizeof(name), value); = [Defining a value for name(name must be a buffer(char x[] or chor *x[]) and sizeof(name) show maximum value name can have for snprintf]
 
-					3 strstr(... if have) { x }
+					2 FILE name = fopen("Address of file", "r"/"w"/"x"/"rb") = [File opening in " " levels, name must be a buffer(char name[] of char *name)]
 
-				4 #include <math.h>:
+					3 size_t name0 = fread(name, size of one element by byte, number of elements, name of file) = [Open name file then read number element of them each number byte and sort all of them in name, name must be a buffer and have enough space for element number, Calling name0 by %zu, Format of file must be "rb"]
 
-					0 sqrt((type) name) = [Converting name's type to type]
+					4 fwrite(name, size of one element by byte, number of elements, name of file) = [Give name with number of elements with size of every of element and store all of them into of name of file, Format of file must be "wb"]
+	
+					5 fclose(name of file) = [Closing file that we open]
 
-				5 #include <stdlib.h>:
+				7 #include <stdbool.h>:
 
-					0 atof(... if have) { x } = [Converting string to double]
+					0 bool name = true/false = [Making name false or true]
 
-					1 talloc(... if have) { x } 
+				8 #include <limits.h>:
 
-				6 #include <assert.h>
+					0 TYPE_MIN/MAX = [Show us maximum and minimum of every type can have value, Example = printf("min int = %d\n", INT_MIN)]
 
-				7 #include <stdarg.h>
+				9 #include <errno.h>
 
-				8 #include <stddef.h>:
+					0 errno = x = [Example = errno = x; if (errno != x) { printf("Overflow detected\n"); }]
 
-					0 ptrdiff_t = [Special type for big pointers]
-
-					1 size_t = [Specific type for unsigned integers]
-
-				9 #include <setjmp.h>
-
-				10 #include <signal.h>
-
-				11 #include <time.h>
-
-				12 #include <limits.h> 
-
-				13 #include <float.h>
-					
-			11 Libraries:
-
-				0
 		3 Spaces = [Nodes]"""
 ```
