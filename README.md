@@ -1,16 +1,18 @@
 ```python
-"C": "Page 131"
+"C": "Page 134"
 
 	"0 C(Short)" = 
 	{
 
-		"""0 Knowing specific standard libraries
+		"""0 Chosing specific standard libraries I need
 
-		1 Knowing concepts
+		1 Chosing specific conceptes that I need
 
-		2 Knowing specific syntaxes
+		2 Chosing specific syntaxes that I need
 
-		3 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
+		3 Coding
+
+		5 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
@@ -765,7 +767,7 @@
 
 					3 free
 
-					4 exit
+					4 exit(Number) = [Exit of program]
 
 					5 strtol
 
