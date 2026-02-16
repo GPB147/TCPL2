@@ -1,16 +1,18 @@
 ```python
-"C": "Page 134"
+"C": "Page 161"
 
 	"0 C(Short)" = 
 	{
 
-		"""0 Chosing specific standard libraries I need
+		"""0 Chosing specific standard libraries and functions I need
 
-		1 Chosing specific conceptes that I need
+		1 Chosing specific type and deftypes I need
 
-		2 Chosing specific syntaxes that I need
+		2 Chosing specific conceptes that I need
 
-		3 Coding
+		3 Chosing specific syntaxes that I need
+
+		4 Coding
 
 		5 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
