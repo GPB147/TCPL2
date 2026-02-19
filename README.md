@@ -1,5 +1,5 @@
 ```python
-"C": "Page 161"
+"C": "Page 205"
 
 	"0 C(Short)" = 
 	{
@@ -189,6 +189,12 @@
 									4 #ifndef name = [if not define]
 									    #define name variable/expression
 									#endif
+
+									5 #line
+	
+									6 #error
+
+									7 #pragma
 
 						2 Why it's not a good idea = [It's heavy because it's allways run and used memory and CPU, Hard to modify program]
 
@@ -793,7 +799,7 @@
 
 					1 snprintf(name, sizeof(name), value); = [Defining a value for name(name must be a buffer(char x[] or chor *x[]) and sizeof(name) show maximum value name can have for snprintf]
 
-					2 FILE name = fopen("Address of file", "r"/"w"/"x"/"rb") = [File opening in " " levels, name must be a buffer(char name[] of char *name)]
+					2 FILE name = fopen("Address of file", "r"/"w"/"a"/"rb") = [File opening in " " levels, name must be a buffer(char name[] of char *name)]
 
 					3 size_t name0 = fread(name, size of one element by byte, number of elements, name of file) = [Open name file then read number element of them each number byte and sort all of them in name, name must be a buffer and have enough space for element number, Calling name0 by %zu, Format of file must be "rb"]
 
