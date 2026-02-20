@@ -1,20 +1,22 @@
 ```python
-"C": "Page 205"
+"C":
 
 	"0 C(Short)" = 
 	{
 
 		"""0 Chosing specific standard libraries and functions I need
 
-		1 Chosing specific type and deftypes I need
+		1 Chosing specific type and operators I need
 
-		2 Chosing specific conceptes that I need
+		2 Chosing specific defination I need by #define or struct or union or other function or typedef or pointers or arrays or input&output or bolean 
 
-		3 Chosing specific syntaxes that I need
+		3 Chosing specific statements I need
 
-		4 Coding
+		4 Chosing specific iterations I need
 
-		5 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
+		5 Coding
+
+		6 Runing program or programs by cc main.c name.c name.o name.c ... command"""	
 
 	}
 		
